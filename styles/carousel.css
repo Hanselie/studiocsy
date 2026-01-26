@@ -1,0 +1,77 @@
+/* ============================= */
+/* BRAND CAROUSEL – PURE CSS */
+/* ============================= */
+
+.brand-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #111111 50%,
+    #f4f4f5 100%
+  );
+}
+
+/* fade transition from section above */
+.brand-fade-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  background: linear-gradient(to bottom, #000, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.brand-title {
+  text-align: center;
+  font-size: 14px;
+  color: #71717a;
+  margin-bottom: 48px;
+}
+
+/* viewport */
+.brand-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* moving track */
+.brand-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+/* row duplicated */
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding-right: 80px;
+}
+
+/* logos */
+.brand-logo {
+  height: 40px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+}
+
+.brand-logo:hover {
+  opacity: 1;
+}
+
+/* keyframes */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
